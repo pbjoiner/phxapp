@@ -17,7 +17,8 @@ config :phxapp,
          port: 443,
        ],
        force_ssl: [rewrite_on: [:x_forwarded_proto]],
-       cache_static_manifest: "priv/static/cache_manifest.json"
+       cache_static_manifest: "priv/static/cache_manifest.json",
+       secret_key_base: Map.fetch!(System.get_env(), "SECRET_KEY_BASE")
 
 # Do not print debug messages in production
 config :logger, level: :info
@@ -27,21 +28,21 @@ config :logger, level: :info
 # To get SSL working, you will need to add the `https` key
 # to the previous section and set your `:url` port to 443:
 #
-config :phxapp,
-       PhxappWeb.Endpoint,
-       url: [
-         host: "example.com",
-         port: 443
-       ],
-       https: [
-         port: 443,
-         cipher_suite: :strong,
-         keyfile: System.get_env("SSL_KEY_PATH"),
-         certfile: System.get_env("SSL_CERT_PATH"),
-         transport_options: [
-           socket_opts: [:inet6]
-         ]
-       ]
+#config :phxapp,
+#       PhxappWeb.Endpoint,
+#       url: [
+#         host: "example.com",
+#         port: 443
+#       ],
+#       https: [
+#         port: 443,
+#         cipher_suite: :strong,
+#         keyfile: System.get_env("SSL_KEY_PATH"),
+#         certfile: System.get_env("SSL_CERT_PATH"),
+#         transport_options: [
+#           socket_opts: [:inet6]
+#         ]
+#       ]
 #
 # The `cipher_suite` is set to `:strong` to support only the
 # latest and more secure SSL ciphers. This means old browsers
@@ -63,4 +64,4 @@ config :phxapp,
 
 # Finally import the config/prod.secret.exs which loads secrets
 # and configuration from environment variables.
-import_config "prod.secret.exs"
+#import_config "prod.secret.exs"
