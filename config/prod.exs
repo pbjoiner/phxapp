@@ -12,9 +12,8 @@ use Mix.Config
 config :phxapp,
        PhxappWeb.Endpoint,
        url: [
-         scheme: "https",
          host: "damp-stream-83697.herokuapp.com",
-         port: 443,
+         port: 80,
        ],
        force_ssl: [rewrite_on: [:x_forwarded_proto]],
        cache_static_manifest: "priv/static/cache_manifest.json"
