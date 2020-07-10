@@ -34,7 +34,7 @@ npm-debug.log
 /priv/static/
 
 # don't load secure data to git
-**/*.secret.exs
+**/dev.secret.exs
 
 # Paul's default gitignore
 .idea
@@ -53,7 +53,7 @@ dist
 *.svg
 *.ttf
 *.woff
-*test.*
+*.test.*
 *bak.*
 *.working*
 *.min.*
