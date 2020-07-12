@@ -22,11 +22,12 @@ defmodule PhxappWeb.Router do
          error_handler: Pow.Phoenix.PlugErrorHandler
   end
 
-  #  scope "/", PhxappWeb do
-  #    pipe_through :browser
-  #
-  #    get "/", PageController, :index
-  #  end
+    scope "/", PhxappWeb do
+      pipe_through :browser
+
+      get "/", PageController, :index
+    end
+
   scope "/" do
     pipe_through :browser
 
