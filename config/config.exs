@@ -54,8 +54,8 @@ config :phxapp, PhxappWeb.Mailer,
        server: {:system, "MAILGUN_SMTP_SERVER"},
        hostname: {:system, "MAILGUN_DOMAIN"},
        port: {:system, "MAILGUN_SMTP_PORT"},
-       username: {:system, "MAILGUN_SMTP_LOGIN"}
-       password: {:system, "MAILGUN_SMTP_PASSWORD"}
+       username: {:system, "MAILGUN_SMTP_LOGIN"},
+       password: {:system, "MAILGUN_SMTP_PASSWORD"},
        tls: :if_available, # can be `:always` or `:never`
        allowed_tls_versions: [:"tlsv1", :"tlsv1.1", :"tlsv1.2"], # or {:system, "ALLOWED_TLS_VERSIONS"} w/ comma seprated values (e.g. "tlsv1.1,tlsv1.2")
        ssl: false, # can be `true`
