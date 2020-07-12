@@ -1,5 +1,9 @@
 defmodule PhxappWeb.Router do
   use PhxappWeb, :router
+  use Pow.Phoenix.Router
+
+  use Pow.Extension.Phoenix.Router,
+      extensions: [PowResetPassword, PowEmailConfirmation]
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,10 +17,27 @@ defmodule PhxappWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", PhxappWeb do
+  pipeline :protected do
+    plug Pow.Plug.RequireAuthenticated,
+         error_handler: Pow.Phoenix.PlugErrorHandler
+  end
+
+  #  scope "/", PhxappWeb do
+  #    pipe_through :browser
+  #
+  #    get "/", PageController, :index
+  #  end
+  scope "/" do
     pipe_through :browser
 
-    get "/", PageController, :index
+    pow_routes()
+    pow_extension_routes()
+  end
+
+  scope "/protected", PhxappWeb do
+    pipe_through [:browser, :protected]
+
+    get "/", PageController, :protected_index
   end
 
   # Other scopes may use custom stacks.

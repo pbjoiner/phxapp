@@ -44,7 +44,11 @@ defmodule Phxapp.MixProject do
       {:telemetry_poller, "~> 0.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+    # add email capability
+      {:pow, "~> 1.0.20"},
+      {:bamboo, "~> 1.5"},
+      {:bamboo_smtp, "~> 2.1.0"}
     ]
   end
 

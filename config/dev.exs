@@ -1,7 +1,5 @@
 use Mix.Config
 
-import_config "dev.secret.exs"
-
 # Configure your database
 config :phxapp, Phxapp.Repo,
   username: "postgres",
@@ -76,3 +74,8 @@ config :phoenix, :stacktrace_depth, 20
 
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
+
+config :phoenix, PhxappWeb.Pow.Mailer,
+       adapter: Bamboo.SMTPAdapter,
+       server: "localhost",
+       port: 1025
