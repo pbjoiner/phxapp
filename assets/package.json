@@ -3,7 +3,8 @@
   "description": " ",
   "license": "MIT",
   "scripts": {
-    "deploy": "webpack --mode production",
+    "comment_previous": "\"deploy\": \"webpack --mode production\"",
+    "deploy": "NODE_ENV=production webpack --mode production",
     "watch": "webpack --mode development --watch"
   },
   "dependencies": {
@@ -25,3 +26,5 @@
     "webpack-cli": "^3.3.2"
   }
 }
+
+

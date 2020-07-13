@@ -49,7 +49,7 @@ config :phxapp,
 
 # add bamboo for email
 config :phxapp, PhxappWeb.Mailer,
-       adapter: Bamboo.SMTPAdapter,
+       adapter: Bamboo.MailgunAdapter,
        api_key: {:system, "MAILGUN_API_KEY"},
        server: {:system, "MAILGUN_SMTP_SERVER"},
        hostname: {:system, "MAILGUN_DOMAIN"},
