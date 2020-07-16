@@ -4,6 +4,7 @@ defmodule Phxapp.Repo.Migrations.CreateCells do
   def change do
     add :data, :string
     belongs_to :row, Row
-    has :field_list_entry, Phxapp.FieldList
+
+    many_to_many(:field_type, Phxapp.FieldType, join_through: "cell_field_type")
   end
 end

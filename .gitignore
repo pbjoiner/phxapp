@@ -41,6 +41,7 @@ Source
 dist
 *.test.*
 *bak.*
+bak
 *.working*
 *.min.*
 *.tmp

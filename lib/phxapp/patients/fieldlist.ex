@@ -4,5 +4,6 @@ defmodule Phxapp.FieldList do
 	schema "fieldlist" do
 		field :index, :integer
 		field :name, :string
+		belongs_to :patient, Phxapp.Patient
 	end
 end

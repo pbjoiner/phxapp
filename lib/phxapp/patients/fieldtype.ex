@@ -3,7 +3,7 @@ defmodule Phxapp.FieldType do
 
 	schema "fieldtypes" do
 		field :name, :string
-		field :description
-		field :input_type
+		field :description, :string
+		field :input_type, :string
 	end
 end

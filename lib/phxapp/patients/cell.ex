@@ -3,5 +3,6 @@ defmodule Phxapp.Cell do
 
 	schema "cells" do
 		field :data, :string
+		belongs_to :row, Phxapp.Row
 	end
 end

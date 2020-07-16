@@ -13,6 +13,6 @@ defmodule Phxapp.Repo.Migrations.CreatePatients do
       has_many :field_list_entries, Phxapp.FieldList
     end
 
-    create index(:patient, [:last_name, :first_name, :birthdate])
+    create unique_index(:patients, [:last_name, :first_name, :birthdate])
   end
 end

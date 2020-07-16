@@ -8,7 +8,7 @@ defmodule Phxapp.Patient do
 		field :genderaab, :string
 		field :gender, :string
 		field :blood_type, :string
-		has_many :rows, Phxapp.Rows
+		has_many :rows, Phxapp.Row
 		has_many :field_list_entries, Phxapp.FieldList
 	end
 end
