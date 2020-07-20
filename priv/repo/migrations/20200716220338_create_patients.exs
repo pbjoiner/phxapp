@@ -9,8 +9,6 @@ defmodule Phxapp.Repo.Migrations.CreatePatients do
       add :genderaab, :string, null: false
       add :gender, :string, null: false
       add :blood_type, :string
-      has_many :rows, Phxapp.Rows
-      has_many :field_list_entries, Phxapp.FieldList
     end
 
     create unique_index(:patients, [:last_name, :first_name, :birthdate])
