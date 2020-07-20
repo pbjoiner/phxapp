@@ -7,7 +7,6 @@ defmodule Phxapp.Repo.Migrations.CreateFieldTypes do
 			add :label, :string
 			add :description, :string
 			add :input_type, :string, null: false
-			add :options, :string
 		end
 
 		create unique_index(:field_types, [:name])
