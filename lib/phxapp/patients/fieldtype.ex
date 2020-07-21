@@ -9,10 +9,11 @@ defmodule Phxapp.FieldType do
 		has_many :field_options, Phxapp.FieldOption
 	end
 
-	def changeset(struct, params) do
-		struct
+	def changeset(fieldType, params) do
+		fieldType
 		|> cast(params, [:name, :label, :description, :input_type])
 		|> validate_required([:name, :input_type])
+		|> validate_input_type()
 	end
 
 	@input_types [
