@@ -20,13 +20,15 @@ defmodule Phxapp.FieldType do
 		"button",
 		"checkbox",
 		"date",
+		"decimal",
 		"number",
 		"password",
 		"radio",
 		"range",
+		"splittext",
+		"splitnumber",
 		"text",
-		"time",
-		"bloodpressure"
+		"time"
 	]
 
 	def validate_input_type(changeset) do
