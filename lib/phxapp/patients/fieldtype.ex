@@ -18,26 +18,13 @@ defmodule Phxapp.FieldType do
 	@input_types [
 		"button",
 		"checkbox",
-		"color",
 		"date",
-		"datetime-local",
-		"email",
-		"file",
-		"hidden",
-		"image",
-		"month",
 		"number",
 		"password",
 		"radio",
 		"range",
-		"reset",
-		"search",
-		"submit",
-		"tel",
 		"text",
-		"time",
-		"url",
-		"week"
+		"time"
 	]
 
 	def validate_input_type(changeset) do
@@ -46,7 +33,7 @@ defmodule Phxapp.FieldType do
 		if inputtype in @input_types do
 			changeset
 		else
-			add_error(changeset, :input_type, "is not an HTML input field.")
+			add_error(changeset, :input_type, "is not an HTML input field type.")
 		end
 	end
 end
