@@ -24,7 +24,8 @@ defmodule Phxapp.FieldType do
 		"radio",
 		"range",
 		"text",
-		"time"
+		"time",
+		"bloodpressure"
 	]
 
 	def validate_input_type(changeset) do
@@ -33,7 +34,7 @@ defmodule Phxapp.FieldType do
 		if inputtype in @input_types do
 			changeset
 		else
-			add_error(changeset, :input_type, "is not an HTML input field type.")
+			add_error(changeset, :input_type, "is not an acceptable input field type.")
 		end
 	end
 end

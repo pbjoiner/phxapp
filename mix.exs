@@ -48,7 +48,8 @@ defmodule Phxapp.MixProject do
     # add email capability
       {:pow, "~> 1.0.20"},
       {:bamboo, "~> 1.5"},
-      {:bamboo_smtp, "~> 2.1.0"}
+      {:bamboo_smtp, "~> 2.1.0"},
+      {:csv, ">= 0.0.0"}
     ]
   end
 
