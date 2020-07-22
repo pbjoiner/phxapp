@@ -5,6 +5,6 @@ defmodule Phxapp.FieldList do
 		field :index, :integer
 		field :name, :string
 		belongs_to :patient, Phxapp.Patient
-		many_to_many(:field_types, Phxapp.FieldType, join_through: "field_list_field_types")
+		many_to_many(:field_types, Phxapp.FieldTypes.FieldType, join_through: "field_list_field_types")
 	end
 end

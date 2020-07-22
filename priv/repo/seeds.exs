@@ -10,7 +10,7 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 
-alias Phxapp.FieldType
+alias Phxapp.FieldTypes
 
 fieldTypeData = [
 	%{
@@ -27,8 +27,9 @@ fieldTypeData = [
 		options: [
 			%{
 				label: "Systolic",
-				value: "01" # for split number fields, the value is the field order
-			 },
+				value: "01"
+				# for split number fields, the value is the field order
+			},
 			%{
 				label: "Diastolic",
 				value: "02"
@@ -62,6 +63,9 @@ fieldTypeData = [
 ]
 
 
-Enum.each(fieldTypeData, fn(data) ->
-	FieldType.create_field_types!(data)
-end)
+Enum.each(
+	fieldTypeData,
+	fn (data) ->
+		FieldTypes.create_field_type(data)
+	end
+)
