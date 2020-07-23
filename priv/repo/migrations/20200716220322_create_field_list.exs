@@ -5,6 +5,7 @@ defmodule Phxapp.Repo.Migrations.CreateFieldList do
 		create table(:field_list) do
 			add :index, :integer, null: false
 			add :name, :string, null: false
+			add :patient_id, :id, null: false
 		end
 	end
 end

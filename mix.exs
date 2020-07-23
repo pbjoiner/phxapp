@@ -45,10 +45,11 @@ defmodule Phxapp.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-    # add email capability
+      # add email capability
       {:pow, "~> 1.0.20"},
       {:bamboo, "~> 1.5"},
       {:bamboo_smtp, "~> 2.1.0"},
+      # seed from CSV, eventually
       {:csv, ">= 0.0.0"}
     ]
   end
