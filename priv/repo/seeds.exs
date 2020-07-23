@@ -16,19 +16,18 @@ fieldTypeData = [
 	%{
 		name: "rowDate",
 		label: "Date",
-		description: "date data was entered",
-		input_type: :date
+		input_type: "date"
 	},
 	%{
 		name: "bloodPressure",
 		label: "Blood Pressure",
 		description: "blood pressure as systolic over diastolic",
-		input_type: :splitnumber,
-		options: [
+		input_type: "splitnumber",
+		field_options: [
 			%{
 				label: "Systolic",
-				value: "01"
 				# for split number fields, the value is the field order
+				value: "01"
 			},
 			%{
 				label: "Diastolic",
@@ -40,25 +39,25 @@ fieldTypeData = [
 		name: "pulse",
 		label: "Pulse",
 		description: "pulse rate in beats per minute",
-		input_type: :number
+		input_type: "number"
 	},
 	%{
 		name: "tempAm",
 		label: "Temperature AM",
-		description: "temperature in the morning",
-		input_type: :decimal
+		description: "morning temperature in farenheit",
+		input_type: "decimal"
 	},
 	%{
 		name: "tempPm",
 		label: "Temperature PM",
-		description: "temperature in the evening",
-		input_type: :decimal
+		description: "evening temperature in farenheit",
+		input_type: "decimal"
 	},
 	%{
 		name: "weight",
 		label: "Weight",
 		description: "weight in pounds",
-		input_type: :decimal
+		input_type: "decimal"
 	}
 ]
 
@@ -66,6 +65,6 @@ fieldTypeData = [
 Enum.each(
 	fieldTypeData,
 	fn (data) ->
-		FieldTypes.create_field_type(data)
+			FieldTypes.create_field_type(data)
 	end
 )

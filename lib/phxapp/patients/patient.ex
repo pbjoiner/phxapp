@@ -9,6 +9,6 @@ defmodule Phxapp.Patient do
 		field :gender, :string
 		field :blood_type, :string
 		has_many :rows, Phxapp.Row
-		many_to_many(:field_types, Phxapp.FieldType, join_through: "patients_field_types")
+		many_to_many(:field_types, Phxapp.FieldTypes.FieldType, join_through: "patients_field_types")
 	end
 end

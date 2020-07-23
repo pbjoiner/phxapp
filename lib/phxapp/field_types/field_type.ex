@@ -7,6 +7,7 @@ defmodule Phxapp.FieldTypes.FieldType do
     field :input_type, :string
     field :label, :string
     field :name, :string
+    has_many :field_options, Phxapp.FieldTypes.FieldOptions.FieldOption
   end
 
   @doc """
@@ -16,8 +17,10 @@ defmodule Phxapp.FieldTypes.FieldType do
   """
   def changeset(field_type, attrs) do
     field_type
-    |> cast(attrs, [:name, :label, :description, :input_type])
+    |> cast(attrs, [:name, :label, :input_type, :description])
+    |> cast_assoc(:field_options, required: false)
     |> validate_required([:name, :input_type])
+    |> unique_constraint(:name)
     |> validate_input_type()
   end
 
@@ -42,7 +45,7 @@ defmodule Phxapp.FieldTypes.FieldType do
     if inputtype in @input_types do
       changeset
     else
-      add_error(changeset, :input_type, "is not an HTML input field type.")
+      add_error(changeset, :input_type, "is not an acceptable field type.")
     end
   end
 end
