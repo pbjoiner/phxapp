@@ -1,5 +1,0 @@
-<h1>Edit Field type</h1>
-
-<%= render "form.html", Map.put(assigns, :action, Routes.field_type_path(@conn, :update, @field_type)) %>
-
-<span><%= link "Back", to: Routes.field_type_path(@conn, :index) %></span>
