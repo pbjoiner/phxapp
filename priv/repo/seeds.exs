@@ -44,13 +44,13 @@ fieldTypeData = [
 	%{
 		name: "tempAm",
 		label: "Temperature AM",
-		description: "morning temperature in farenheit",
+		description: "morning temperature in fahrenheit",
 		input_type: "decimal"
 	},
 	%{
 		name: "tempPm",
 		label: "Temperature PM",
-		description: "evening temperature in farenheit",
+		description: "evening temperature in fahrenheit",
 		input_type: "decimal"
 	},
 	%{
