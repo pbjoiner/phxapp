@@ -103,5 +103,7 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# generated directories and files
 /node_modules/
-/node_modules/
+/Mnesia.*
