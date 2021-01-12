@@ -1,0 +1,26 @@
+<h1>Listing System access</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Permissions hash</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for system_access <- @system_access do %>
+    <tr>
+      <td><%= system_access.permissions_hash %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.system_access_path(@conn, :show, system_access) %></span>
+        <span><%= link "Edit", to: Routes.system_access_path(@conn, :edit, system_access) %></span>
+        <span><%= link "Delete", to: Routes.system_access_path(@conn, :delete, system_access), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New System access", to: Routes.system_access_path(@conn, :new) %></span>

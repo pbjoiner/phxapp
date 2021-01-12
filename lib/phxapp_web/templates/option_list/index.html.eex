@@ -1,0 +1,24 @@
+<h1>Listing Option lists</h1>
+
+<table>
+  <thead>
+    <tr>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for option_list <- @option_lists do %>
+    <tr>
+
+      <td>
+        <span><%= link "Show", to: Routes.option_list_path(@conn, :show, option_list) %></span>
+        <span><%= link "Edit", to: Routes.option_list_path(@conn, :edit, option_list) %></span>
+        <span><%= link "Delete", to: Routes.option_list_path(@conn, :delete, option_list), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Option list", to: Routes.option_list_path(@conn, :new) %></span>

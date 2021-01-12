@@ -1,0 +1,5 @@
+<h1>Edit Value</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.value_path(@conn, :update, @value)) %>
+
+<span><%= link "Back", to: Routes.value_path(@conn, :index) %></span>

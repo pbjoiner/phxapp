@@ -1,0 +1,13 @@
+<h1>Show System access</h1>
+
+<ul>
+
+  <li>
+    <strong>Permissions hash:</strong>
+    <%= @system_access.permissions_hash %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.system_access_path(@conn, :edit, @system_access) %></span>
+<span><%= link "Back", to: Routes.system_access_path(@conn, :index) %></span>

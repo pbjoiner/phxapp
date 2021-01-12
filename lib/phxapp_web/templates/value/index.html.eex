@@ -1,0 +1,28 @@
+<h1>Listing Values</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Date</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for value <- @values do %>
+    <tr>
+      <td><%= value.value %></td>
+      <td><%= value.date %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.value_path(@conn, :show, value) %></span>
+        <span><%= link "Edit", to: Routes.value_path(@conn, :edit, value) %></span>
+        <span><%= link "Delete", to: Routes.value_path(@conn, :delete, value), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Value", to: Routes.value_path(@conn, :new) %></span>

@@ -1,0 +1,44 @@
+/* This file is for your main application css. */
+@import "./phoenix.css";
+
+$error-color: #a94442;
+$error-back: #f2dede;
+
+
+/* Alerts and form errors */
+.alert {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+.alert-info {
+	color: #31708f;
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+}
+
+.alert-warning {
+	color: #8a6d3b;
+	background-color: #fcf8e3;
+	border-color: #faebcc;
+}
+
+.alert-danger {
+	color: $error-color;
+	background-color: $error-back;
+	border-color: $error-color;
+}
+
+.alert p {
+	margin-bottom: 0;
+}
+
+.alert:empty {
+	display: none;
+}
+
+.help-block {
+	color: $error-color;
+}

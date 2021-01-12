@@ -1,0 +1,5 @@
+<h1>Edit Field list</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.field_list_path(@conn, :update, @field_list)) %>
+
+<span><%= link "Back", to: Routes.field_list_path(@conn, :index) %></span>

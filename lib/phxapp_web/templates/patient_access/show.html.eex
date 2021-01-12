@@ -1,0 +1,8 @@
+<h1>Show Patient access</h1>
+
+<ul>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.patient_access_path(@conn, :edit, @patient_access) %></span>
+<span><%= link "Back", to: Routes.patient_access_path(@conn, :index) %></span>

@@ -1,0 +1,18 @@
+<h1>Show Field list</h1>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @field_list.name %>
+  </li>
+
+  <li>
+    <strong>Input type:</strong>
+    <%= @field_list.input_type %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.field_list_path(@conn, :edit, @field_list) %></span>
+<span><%= link "Back", to: Routes.field_list_path(@conn, :index) %></span>

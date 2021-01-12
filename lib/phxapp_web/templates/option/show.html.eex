@@ -1,0 +1,18 @@
+<h1>Show Option</h1>
+
+<ul>
+
+  <li>
+    <strong>Label:</strong>
+    <%= @option.label %>
+  </li>
+
+  <li>
+    <strong>Value:</strong>
+    <%= @option.value %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.option_path(@conn, :edit, @option) %></span>
+<span><%= link "Back", to: Routes.option_path(@conn, :index) %></span>

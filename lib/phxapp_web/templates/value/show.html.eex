@@ -1,0 +1,18 @@
+<h1>Show Value</h1>
+
+<ul>
+
+  <li>
+    <strong>Value:</strong>
+    <%= @value.value %>
+  </li>
+
+  <li>
+    <strong>Date:</strong>
+    <%= @value.date %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.value_path(@conn, :edit, @value) %></span>
+<span><%= link "Back", to: Routes.value_path(@conn, :index) %></span>

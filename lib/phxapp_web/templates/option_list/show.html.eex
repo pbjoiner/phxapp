@@ -1,0 +1,8 @@
+<h1>Show Option list</h1>
+
+<ul>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.option_list_path(@conn, :edit, @option_list) %></span>
+<span><%= link "Back", to: Routes.option_list_path(@conn, :index) %></span>

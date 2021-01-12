@@ -1,0 +1,32 @@
+<h1>Listing Field types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Label</th>
+      <th>Description</th>
+      <th>Input type</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for field_type <- @field_types do %>
+    <tr>
+      <td><%= field_type.name %></td>
+      <td><%= field_type.label %></td>
+      <td><%= field_type.description %></td>
+      <td><%= field_type.input_type %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.field_type_path(@conn, :show, field_type) %></span>
+        <span><%= link "Edit", to: Routes.field_type_path(@conn, :edit, field_type) %></span>
+        <span><%= link "Delete", to: Routes.field_type_path(@conn, :delete, field_type), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Field type", to: Routes.field_type_path(@conn, :new) %></span>

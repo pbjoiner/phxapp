@@ -1,0 +1,5 @@
+<h1>Edit System access</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.system_access_path(@conn, :update, @system_access)) %>
+
+<span><%= link "Back", to: Routes.system_access_path(@conn, :index) %></span>
